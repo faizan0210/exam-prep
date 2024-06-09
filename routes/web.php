@@ -23,35 +23,11 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware('auth')->name('dashboard');
-
-
-
-// Route::get('/login', function () {
-//     return view('login');
-// })->name('login');
-
-// Route::post('/login', [AuthController::class, 'login']);
-
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
 Route::get('/request-device-change', function () {
     return view('request-device-change');
@@ -64,10 +40,7 @@ Route::delete('/delete-devices/{userId}', [DeviceController::class, 'deleteDevic
 Route::get('/request-device-change', function () {
     return view('request-device-change');
 })->middleware('auth')->name('request.device.change');
-
 Route::post('/request-device-change', [AuthController::class, 'requestDeviceChange'])->middleware('auth');
-
-
 
 Route::get('/teacher/login', [TeacherController::class, 'showLoginForm'])->name('teacher.login');
 Route::post('/teacher/login', [TeacherController::class, 'login']);

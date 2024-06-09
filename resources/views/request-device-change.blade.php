@@ -1,4 +1,3 @@
-<!-- resources/views/request-device-change.blade.php -->
 @extends('layouts.app')
 
 @section('title', 'Request Device Change')

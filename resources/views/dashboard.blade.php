@@ -1,4 +1,3 @@
-<!-- resources/views/dashboard.blade.php -->
 @extends('layouts.app')
 
 @section('title', 'Dashboard')
@@ -28,9 +27,15 @@
         </select>
     </div>
     <div class="form-group">
-        <label for="device_identifier">Device Identifier</label>
-        <input type="text" class="form-control" id="device_identifier" name="device_identifier" required>
+        <!-- <label for="device_identifier">Device Identifier</label> -->
+        <input type="hidden" class="form-control" id="device_identifier" name="device_identifier" required>
     </div>
     <button type="submit" class="btn btn-primary btn-block">Register Device</button>
 </form>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var deviceIdentifierField = document.getElementById('device_identifier');
+        deviceIdentifierField.value = uuid.v4();
+    });
+</script>
 @endsection

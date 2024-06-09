@@ -1,4 +1,3 @@
-<!-- resources/views/request-sent.blade.php -->
 @extends('layouts.app')
 
 @section('title', 'Request Sent')

@@ -1,4 +1,3 @@
-<!-- resources/views/teacher/dashboard.blade.php -->
 @extends('layouts.app')
 
 @section('title', 'Teacher Dashboard')

@@ -1,4 +1,3 @@
-<!-- resources/views/device-limit-reached.blade.php -->
 @extends('layouts.app')
 
 @section('title', 'Device Limit Reached')
